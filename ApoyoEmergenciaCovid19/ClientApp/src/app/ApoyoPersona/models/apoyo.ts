@@ -1,5 +1,5 @@
 export class Apoyo {
-    valorApoyo: number;
     modalidadApoyo: string;
+    valorApoyo: number;
     fechaEntrega: Date;
 }
