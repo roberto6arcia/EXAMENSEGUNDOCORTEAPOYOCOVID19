@@ -25,6 +25,7 @@
             <th scope="col">EDAD</th>
             <th scope="col">DEPARTAMENTO</th>
             <th scope="col">CIUDAD</th>
+            <th scope="col">APOYO</th>
             
           </tr>
         </thead>
@@ -38,6 +39,8 @@
             <td>{{ persona.edadP }}</td>
             <td>{{ persona.departamentoP }}</td>
             <td>{{ persona.ciudadP }}</td>
+            <td>{{ persona.Apoyos}}</td>
+            <td><button class="btn btn-success btn-sm" (click)="apoyar(persona.identificacionP)" routerLink="/agregarApoyo" >Apoyo</button></td>
       
           </tr>
         </tbody>
