@@ -8,6 +8,14 @@
       <form [formGroup]="formGroup">
   
         <div class="form-group">
+          <label>Modalidad</label>
+          <select class="form-control" [(ngModel)]="apoyo.modalidadApoyo" [ngModelOptions]="{standalone:true}" >
+            <option selected value="Alimentario">Alimentario</option>
+            <option value="Economico">Económico</option>
+            </select>
+        </div>
+
+        <div class="form-group">
           <label>Valor de apoyo</label>
           <input type="number" name="valorApoyo" formControlName="valorApoyo" class="form-control"
             [ngClass]="{ 'is-invalid':  control.valorApoyo.errors}" />
@@ -15,14 +23,14 @@
             <div *ngIf="control.valorApoyo.errors.required">Se requiere el valor de apoyo</div>
           </div>
         </div>
-  
+
         <div class="form-group">
-          <label>Modalidad</label>
-          <select class="form-control" [(ngModel)]="apoyo.modalidadApoyo" [ngModelOptions]="{standalone:true}" >
-            <option selected value="Alimentario">Alimentario</option>
-            <option value="Economico">Económico</option>
-            </select>
-        </div>
+          <label>Fecha de entrega</label>
+                <input type="date" name="fechaEntrega" formControlName="fechaEntrega" class="form-control" [ngClass]="{ 'is-invalid': control.fechaEntrega.errors}" />
+                <div *ngIf="control.fechaEntrega.errors" class="invalid-feedback">
+                  <div *ngIf="control.fechaEntrega.errors.required">Se requiere la fecha es requerida</div>
+                </div>
+            </div>
   
         <div class="button">
           <button type="button" class="btn btn-primary btn-block btn-lg" (click)="onSubmit()"

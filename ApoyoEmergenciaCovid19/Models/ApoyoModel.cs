@@ -9,7 +9,6 @@ namespace ApoyoEmergenciaCovid19.Models
 {
     public class ApoyoInputModel
     {
-        [Required(ErrorMessage = "La Persona es requerida")]
         public string Persona { get; set; }
         [Required(ErrorMessage = "La Modalidad es requerido")]
         public string ModalidadApoyo { get; set; }

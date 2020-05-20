@@ -26,13 +26,11 @@ export class ApoyoRegistroComponent implements OnInit {
   private buildForm() {
     this.apoyo = new Apoyo();
     let myDate = new Date();
-    this.apoyo.modalidadApoyo = '';
     this.apoyo.valorApoyo = 0;
     this.apoyo.fechaEntrega= myDate;
 
 
     this.formGroup = this.formBuilder.group({
-      modalidadApoyo: [this.apoyo.modalidadApoyo, Validators.required],
       valorApoyo: [this.apoyo.valorApoyo, Validators.required],
       fechaEntrega: [this.apoyo.fechaEntrega, Validators.required],
 
@@ -53,7 +51,7 @@ export class ApoyoRegistroComponent implements OnInit {
   }
 
   add() {
-    this.apoyo = this.formGroup.value;
+    this.apoyo.persona = this.formGroup.value;
     this.apoyoService.post(this.apoyo).subscribe(p => {
       if (p != null) {
 
