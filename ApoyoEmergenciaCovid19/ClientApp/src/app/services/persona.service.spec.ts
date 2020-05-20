@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
+import { Injectable, Inject } from '@angular/core';
 import { PersonaService } from './persona.service';
 
 describe('PersonaService', () => {

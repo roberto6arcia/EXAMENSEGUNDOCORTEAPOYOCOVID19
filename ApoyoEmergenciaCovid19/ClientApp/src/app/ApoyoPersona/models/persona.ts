@@ -6,4 +6,5 @@ export class Persona {
     edadP: number;
     departamentoP: string;
     ciudadP: string;
+    valorAcumuladoApoyo: number;
 }

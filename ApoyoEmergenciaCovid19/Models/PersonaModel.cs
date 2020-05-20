@@ -25,6 +25,7 @@ namespace ApoyoEmergenciaCovid19.Models
         public string DepartamentoP { get; set; }
         [Required(ErrorMessage = "La ciudad es requerida")]
         public string CiudadP { get; set; }
+        public int ValorAcumuladoApoyo { get; set; }
 
     }
 
@@ -42,6 +43,7 @@ namespace ApoyoEmergenciaCovid19.Models
             EdadP = persona.EdadP;
             DepartamentoP = persona.DepartamentoP;
             CiudadP = persona.CiudadP;
+            ValorAcumuladoApoyo = persona.ValorAcumuladoApoyo;
         }
     }
     public class SexValidation : ValidationAttribute

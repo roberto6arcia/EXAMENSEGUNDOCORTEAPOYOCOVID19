@@ -18,4 +18,8 @@ export class PersonaConsultaComponent implements OnInit {
     });
   }
 
+  apoyar(id:string):void{
+    this.personas.find(x => x.identificacionP == id);
+  }
+
 }

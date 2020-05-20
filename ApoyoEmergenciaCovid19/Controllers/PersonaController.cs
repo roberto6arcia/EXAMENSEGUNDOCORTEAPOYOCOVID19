@@ -60,6 +60,8 @@ namespace ApoyoEmergenciaCovid19.Controllers
             string mensaje = _personaService.Eliminar(identificacionP);
             return Ok(mensaje);
         }
+
+
         private Persona MapearPersona(PersonaInputModel personaInput)
         {
             var persona = new Persona
@@ -70,16 +72,19 @@ namespace ApoyoEmergenciaCovid19.Controllers
                 SexoP = personaInput.SexoP,
                 EdadP = personaInput.EdadP,
                 DepartamentoP = personaInput.DepartamentoP,
-                CiudadP = personaInput.CiudadP
+                CiudadP = personaInput.CiudadP,
+                ValorAcumuladoApoyo= personaInput.ValorAcumuladoApoyo
             };
             return persona;
         }
+
         // PUT: api/Persona/5
         [HttpPut("{identificacionP}")]
         public ActionResult<string> Put(string identificacionP, Persona persona)
         {
             throw new NotImplementedException();
         }
+
         
     }
 }

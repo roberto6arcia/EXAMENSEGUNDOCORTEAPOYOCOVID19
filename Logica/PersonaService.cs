@@ -23,7 +23,7 @@ namespace Logica
                 {
                     return new GuardarPersonaResponse($"Error de la Aplicacion: La persona ya se encuentra registrada!");
                 }        
-              
+                     
                 _context.Personas.Add(persona);
                 _context.SaveChanges();
                 return new GuardarPersonaResponse(persona);

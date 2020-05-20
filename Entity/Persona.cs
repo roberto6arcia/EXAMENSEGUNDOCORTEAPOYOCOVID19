@@ -13,6 +13,7 @@ namespace Entity
         public int EdadP { get; set; }
         public string DepartamentoP { get; set; }
         public string CiudadP { get; set; }
+        public int ValorAcumuladoApoyo { get; set; }
 
     }
 }
